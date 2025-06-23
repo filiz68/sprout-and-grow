@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register for Event | Sprout & Grow</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- Site header with logo and navigation -->
+  <header>
+    <img src="images/SproutLOGO.png" alt="Sprout & Grow Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="register.html" class="active">Register for Event</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+      <!-- List of events -->
+    <h1>Register for an Event</h1>
+    <form class="register-form">
+      <label for="fullname">Full Name*</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address*</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="event">Select Event*</label>
+      <select id="event" name="event" required>
+        <option value="">-- Please choose an event --</option>
+        <option value="spring-workshop">Spring Planting Workshop</option>
+        <option value="community-swap">Community Plant Swap</option>
+        <option value="soil-diy">Organic Soil DIY</option>
+      </select>
+
+      <label for="notes">Anything we should know?</label>
+      <textarea id="notes" name="notes" placeholder="Let us know any questions or needs!"></textarea>
+
+      <button type="submit">Register</button>
+    </form>
+  </main>
+ <!-- Footer with copyright notice and social links -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Sprout &amp; Grow. All rights reserved.</p>
+      
+      <div class="icon-group socials">
+        <a href="https://www.facebook.com/login" target="_blank" rel="noopener">
+          <img src="images/icon-facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/accounts/login" target="_blank" rel="noopener">
+          <img src="images/icon-instagram.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com/login" target="_blank" rel="noopener">
+          <img src="images/icon-twitter.png" alt="Twitter">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
