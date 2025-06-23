@@ -1,0 +1,254 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Set basic font and body color. Add spacing for the fixed header */
+body {
+  font-family: Arial, sans-serif;
+  color: #264228;
+  background-color: #faf9f3;
+  line-height: 1.6;
+  padding-top: 100px; /* Prevent header overlap */
+}
+
+/*   HEADER  */
+/* This makes the header stay at the top while scrolling like freezes*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+/* Logo sizing: stay proportional and never overflow */
+.logo {
+  max-height: 80px;
+  height: auto;
+  width: auto;
+}
+/* Navigation menu horizontal layout */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Nav links basic styling */
+nav ul li a {
+  text-decoration: none;
+  color: #264228;
+  font-weight: bold;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+nav ul li a:visited {
+  color: #264228;
+}
+
+/* wrap all pages in 10% side-margins */
+main {
+  margin: 0 10%;
+}
+
+/* Set up banner with background image and center the text block */
+.banner {
+  background-image: url('../images/banner.png');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* This is the white box with heading and button inside banner */
+.banner-text {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #264228;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+/* Button styling inside the banner */
+.btn {
+  display: inline-block;
+  background-color: #264228;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3a6140;
+}
+
+/* Intro Section */
+/* vertical padding stays the same, margin removed here and moved to main */
+.intro-section {
+  padding: 3rem 0;
+  overflow: auto;         /* clears the float so the section wraps its contents */
+  /* note: no display:flex here — we need a normal block to let float:text wrapping */
+}
+
+.intro-section img {
+  float: left;            /* wrap text around the image */
+  max-width: 100%;        /* fluid resizing */
+  width: 400px;           /* cap at 400px per requirement */
+  height: auto;
+  margin-right: 2rem;     /* space between image and text */
+  margin-bottom: 1rem;    /* space under image on narrow viewports */
+  border-radius: 12px;
+}
+
+/* The text next to the image */
+/* max-width removed so heading never breaks mid-phrase */
+.intro-text {
+  text-align: left;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text h3 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #5a7f59;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Styling Tablet and small desktop screens */
+@media (max-width: 992px) {
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .intro-section {
+    padding: 2rem 1rem;
+  }
+
+  .intro-section img {
+    width: 100%;
+  }
+}
+/* Mobile styles */
+  /* Stack header elements vertically for smaller screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* Stack nav items vertically and add spacing */
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  /* Add inner padding to the banner text */
+
+  .banner-text {
+    padding: 1.5rem;
+  }
+ /* Adjust heading and paragraph font sizes for readability on mobile */
+
+  .banner-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .intro-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text h3 {
+    font-size: 1.1rem;
+  }
+}
+ 
+/* Footer styling with dark background and centered items */
+footer {
+  background-color: #264228;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+/* This wraps the text and the icons */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-content .socials a img {
+  width: 28px;
+  margin: 0 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.socials a img {
+  width: 24px;
+  margin: 0 8px;
+}
+/* For larger screens, space out footer items side-by-side */
+@media (min-width: 600px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
